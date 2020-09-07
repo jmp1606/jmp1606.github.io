@@ -18,7 +18,7 @@
     <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
+<body onload="myFunction()">
 
   <nav id="nav">
       <div class="nav-wrapper">
@@ -43,14 +43,15 @@
 
 
 
-
-
   <script src="js/jquery-2.2.4.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
   <script src="js/materialize.min.js"></script>
   <script src="js/core.js" ></script>
   <script src="js/init.js" ></script>
   <script>
+      function myFunction() {
+          alert("Compatible with Tablet and Mobile only //r//n To open using chrome, press the three dots in the right corner and select 'open in five-slice-solutions");
+      }
 /*Add to the bottom of your index.html file*/
         if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
