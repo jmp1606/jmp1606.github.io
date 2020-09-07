@@ -1,0 +1,149 @@
+<div class="section">
+
+    <img class="hub mainscreen" src="./img/android-chrome-256x256.png">
+
+    <h4 id="latest">The Theatre</h4>
+
+    <!-- <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img class="theatreslider" src="./img/outside-before.jpg" style="width:100%">
+            <div class="text">Outside of the theatre before renovation</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img class="theatreslider" src="./img/outside.jpg" style="width:100%">
+            <div class="text">Outside of the theatre after renovation</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img class="theatreslider" src="./img/inside-before.jpg" style="width:100%">
+            <div class="text">Inside of the Theatre before renovation</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img class="theatreslider" src="./img/inside-new.jpg" style="width:100%">
+            <div class="text">Inside of the theatre after renovation</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div> -->
+
+    <br>
+    <div class="row">
+        <div class="col s12 m7">
+            <div class="card">
+                <div class="card-image">
+                    <img class="theatreslider" src="./img/inside-before.jpg">
+                </div>
+                <div class="card-content cardtext">
+                    <h5>Brief history</h5>
+                    <p>Built in 1766 as a stopping point on a circuit of northern theatres The Georgian Theatre experienced
+                        a chequered history for much of its first 200 years or so – flipping from vibrant theatre to becoming
+                        a home for the local Salvation Army; falling into disuse before finding a new purpose as a sweet
+                        factory – final dereliction and threatened demolition in the 1960’s / 1970’s…</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-image">
+                <img class="theatreslider" src="./img/inside-new.jpg">
+            </div>
+            <div class="card-content cardtext">
+                <h5>And now</h5>
+                <p>Almost 25 years, many hundreds of performances and a major refurbishment later; we now have the venue brought
+                    into the 21st century – with an increase in capacity, comfort and operating hours – offering Stockton
+                    Borough, Teesside and the north east of England an amazing facility to nurture live music. </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-image">
+                <img class="theatreslider" src="./img/live.jpg">
+            </div>
+            <div class="card-content cardtext">
+                <h5>Capacity</h5>
+                <p>The venue itself holds up to 300 people standing at a time. The Georgian Theatre can be home to a varity
+                    of acts such as live music, comedy.film and theatre. It is fun for all of the family and everybody is
+                    welcome.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-image">
+                <img class="theatreslider" src="./img/logo.jpg">
+            </div>
+            <div class="card-content cardtext">
+                <h5>Hiring the Georgian Theatre</h5>
+                <p>Whether you’re an independent promoter or an artist looking to stage your own events; or looking for a really
+                    cool space to stage a party or other celebration – we can make your event work for you. Our venue is
+                    set up to host amazing performances or to celebrate your special occasion; our bar and kitchen can provide
+                    you with a range of beers, ales, gins and cocktails – alongside a well-constructed food offer, ranging
+                    from a simple buffet to something more special.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>

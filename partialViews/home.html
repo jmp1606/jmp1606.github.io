@@ -1,0 +1,40 @@
+
+
+<!--main content section-->
+<div class="section">
+
+<img class="mainpic" src="./img/android-chrome-256x256.png">
+
+<br>
+
+    <div class="container">
+        <form>
+              <label class="logintitle" for="fname">Username</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your Username..">
+  
+              <label class="logintitle" for="lname">Password</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your Password..">
+<br>        
+              <div class="main submit">
+              <input type="submit" value="Submit" onClick="showNav()">
+            </div>
+<br>
+            <div class="submit">
+                <input type="submit" value="Register">
+              </div>
+
+            </form>
+    </div>
+  
+</div>
+<!--close section-->
+
+<script>
+    
+    document.getElementById('nav').style.visibility = "hidden";
+
+    function showNav() {
+        document.getElementById('nav').style.visibility = "visible";
+
+    }
+</script>

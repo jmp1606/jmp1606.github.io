@@ -1,0 +1,55 @@
+<div class="section">
+
+    <img class="hub mainscreen" src="./img/android-chrome-256x256.png">
+
+
+    <h4 id="latest">Latest news</h4>
+
+    <img id="outside" src="./img/outside.jpg">
+    
+    <button class="accordion">EVENTS ARE FOR EVERYONE</button>
+    <div class="panel">
+        <p>We have been included in an Age UK mobility article about accessible event venues in the UK.</p>
+        <a href="https://www.ageukmobility.co.uk/mobility-news/article/accessible-event-venues-in-the-uk">Click here to read the article</a>
+        
+    </div>
+
+    <button class="accordion">MUSIC CHARITY RECOGNISED</button>
+    <div class="panel">
+        <p>Tees Music Alliance has been awarded ‘bronze status’ for its commitment to deaf and disabled music fans, following recognition
+            by Attitude is Everything – the charity that improves Deaf and disabled people’s access to live music by working
+            in partnership with audiences artists and the music industry and operates a nationwide Charter of Best Practice.</p>
+            <a href="https://georgiantheatre.co.uk/music-charity-recognised-work-deaf-disabled-fans">Read More</a>
+    </div>
+
+    <button class="accordion">YOU DON'T HAVE TO LEAVE THE KIDS AT HOME</button>
+    <div class="panel">
+        <p>Our<a href="https://teesmusicalliance.org.uk/policies-access-information"> Admissions policy</a> means that younger music 
+           fans can come along to most of our events (we'll tell you if it's an 18+ event)... We believe that we form our opinions
+           of music at an early age and that once kids get the live music 'bug' it stays with them.</p>
+    </div>
+
+    <button class="accordion">TMA ATTRACTS HERITAGE LOTTERY FUNDING</button>
+    <div class="panel">
+        <p>Teesside music charity, Tees Music Alliance has been successful in attracting £37,000 from the Heritage Lottery Fund
+            (HLF) as part of a year- long project celebrating the organisation’s history and that of an iconic local venue.</p>
+            <a href="https://georgiantheatre.co.uk/tma-attracts-heritage-lottery-funding">Read More</a>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active2");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>

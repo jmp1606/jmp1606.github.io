@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--SPA Application Shell-->
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Georgian Theatre</title>
+
+    <!-- add jQuery core as a file, not a CDN  -->
+
+
+    <!-- CSS override  -->
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+  <nav id="nav">
+      <div class="nav-wrapper">
+        <ul>
+        <li><a class="theatre">The Theatre</a></li>
+        <li><a class="events">Events</a></li>
+        <li><a class="menu">Eat & Drink</a></li>
+        <li><a class="contact">Contact us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+  <!-- SPA root partial views injected into here-->
+  <div class="contentRoot">
+
+
+
+
+  </div><!--close contentRoot-->
+
+
+
+
+
+
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/core.js" ></script>
+  <script src="js/init.js" ></script>
+  <script>
+/*Add to the bottom of your index.html file*/
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js', {
+            scope: "/THEATRE/"
+        }).then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            // Trim the caches on load
+            navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage({
+                command: "trimCaches"
+            });
+        }).catch(function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+        });
+        });
+        }
+    </script>
+
+</body>
+
+</html>
